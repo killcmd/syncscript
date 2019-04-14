@@ -7,5 +7,5 @@ echo "source build/envsetup.sh" >> build_me.sh
 echo "lunch aosp_mata-userdebug" >> build_me.sh
 echo "make clean" >> build_me.sh
 echo "make aex -j$(nproc --all)" >> build_me.sh
-chmod +x ./build_me.sh
+chmod a+x ./build_me.sh
 rm ./bloat.sh
