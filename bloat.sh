@@ -1,4 +1,5 @@
 repo init --depth=1 -u git://github.com/AospExtended/manifest.git -b 10.x
+mkdir ./.repo/local_manifest
 echo '<?xml version="1.0" encoding="UTF-8"?>' >> ./.repo/local_manifest/AEX_manifest.xml
 echo '<manifest>' >> ./.repo/local_manifest/AEX_manifest.xml
 echo '  <project name="killcmd/device_oneplus_guacamole" path="device/oneplus/guacamole" remote="github" revision="AEX" />' >> ./.repo/local_manifest/AEX_manifest.xml
