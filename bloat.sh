@@ -2,11 +2,7 @@ repo init --depth=1 -u git://github.com/AospExtended/manifest.git -b 10.x
 mkdir ./.repo/local_manifests
 echo '<?xml version="1.0" encoding="UTF-8"?>' >> ./.repo/local_manifests/AEX_manifest.xml
 echo '<manifest>' >> ./.repo/local_manifests/AEX_manifest.xml
-echo '  <project name="killcmd/device_oneplus_guacamole" path="device/oneplus/guacamole" remote="github" revision="AEX" />' >> ./.repo/local_manifests/AEX_manifest.xml
-echo '  <project name="LineageOS/android_device_oneplus_common" path="device/oneplus/common" remote="github" revision="lineage-17.1" />' >> ./.repo/local_manifests/AEX_manifest.xml
-echo '  <project name="LineageOS/android_device_oneplus_sm8150-common" path="device/oneplus/sm8150-common" remote="github" revision="lineage-17.1" />' >> ./.repo/local_manifests/AEX_manifest.xml
-echo '  <project name="LineageOS/android_kernel_oneplus_sm8150" path="kernel/oneplus/sm8150" remote="github" revision="lineage-17.1" />' >> ./.repo/local_manifests/AEX_manifest.xml
-echo '  <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" revision="lineage-17.1" />' >> ./.repo/local_manifests/AEX_manifest.xml
+echo '  <project name="Evolution-X-Devices/device_oneplus_guacamole" path="device/oneplus/guacamole" remote="github" revision="ten" />' >> ./.repo/local_manifests/AEX_manifest.xml
 echo '</manifest>' >> ./.repo/local_manifests/AEX_manifest.xml
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 echo "ccache -c" >> Taste.sh
