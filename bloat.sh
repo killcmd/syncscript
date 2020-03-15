@@ -14,6 +14,6 @@ echo "repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags" >>
 echo "source build/envsetup.sh" >> Taste.sh
 echo "lunch potato_guacamole-userdebug" >> Taste.sh
 echo "make clean" >> Taste.sh
-echo "make aex -j$(nproc --all)" >> Taste.sh
+echo "brunch guacamole" >> Taste.sh
 chmod a+x ./Taste.sh
 rm ./bloat.sh
