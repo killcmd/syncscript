@@ -1,18 +1,18 @@
-repo init --depth=1 -u https://github.com/PotatoProject/manifest -b croquette-release
+repo init --depth=1 -u https://github.com/AICP/platform_manifest.git -b q10.0
 mkdir ./.repo/local_manifests
-echo '<?xml version="1.0" encoding="UTF-8"?>' >> ./.repo/local_manifests/potato_manifest.xml
-echo '<manifest>' >> ./.repo/local_manifests/potato_manifest.xml
-echo '  <project name="killcmd/device_oneplus_guacamole" path="device/oneplus/guacamole" remote="github" revision="croquette-release" />' >> ./.repo/local_manifests/potato_manifest.xml
-echo '  <project name="AOSiP-Devices/device_oneplus_common" path="device/oneplus/common" remote="github" revision="ten" />' >> ./.repo/local_manifests/potato_manifest.xml
-echo '  <project name="AOSiP-Devices/device_oneplus_sm8150-common" path="device/oneplus/sm8150-common" remote="github" revision="ten" />' >> ./.repo/local_manifests/potato_manifest.xml
-echo '  <project name="AOSiP-Devices/kernel_oneplus_sm8150" path="kernel/oneplus/sm8150" remote="github" revision="ten" />' >> ./.repo/local_manifests/potato_manifest.xml
-echo '  <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" revision="lineage-17.1" />' >> ./.repo/local_manifests/potato_manifest.xml
-echo '</manifest>' >> ./.repo/local_manifests/potato_manifest.xml
+echo '<?xml version="1.0" encoding="UTF-8"?>' >> ./.repo/local_manifests/aicp_manifest.xml
+echo '<manifest>' >> ./.repo/local_manifests/aicp_manifest.xml
+echo '  <project name="AICP/device_oneplus_guacamole" path="device/oneplus/guacamole" remote="github" revision="p9.0" />' >> ./.repo/local_manifests/aicp_manifest.xml
+echo '  <project name="AOSiP-Devices/device_oneplus_common" path="device/oneplus/common" remote="github" revision="ten" />' >> ./.repo/local_manifests/aicp_manifest.xml
+echo '  <project name="AICP/device_oneplus_sm8150-common" path="device/oneplus/sm8150-common" remote="github" revision="p9.0" />' >> ./.repo/local_manifests/aicp_manifest.xml
+echo '  <project name="AOSiP-Devices/kernel_oneplus_sm8150" path="kernel/oneplus/sm8150" remote="github" revision="ten" />' >> ./.repo/local_manifests/aicp_manifest.xml
+echo '  <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" revision="lineage-17.1" />' >> ./.repo/local_manifests/aicp_manifest.xml
+echo '</manifest>' >> ./.repo/local_manifests/aicp_manifest.xml
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 echo "ccache -c" >> Taste.sh
 echo "repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags" >> Taste.sh
 echo "source build/envsetup.sh" >> Taste.sh
-echo "lunch potato_guacamole-userdebug" >> Taste.sh
+echo "lunch aicp_guacamole-userdebug" >> Taste.sh
 echo "make clean" >> Taste.sh
 echo "brunch guacamole" >> Taste.sh
 chmod a+x ./Taste.sh
